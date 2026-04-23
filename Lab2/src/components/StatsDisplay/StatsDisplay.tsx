@@ -3,10 +3,10 @@ import type { StatsDisplayProps } from '../../types/index.ts';
 
 export const StatsDisplay: React.FC<StatsDisplayProps> = ({
     stats,
-    showReadingTime = true,
-    minWords = 25,
-    maxWords = 100
+    showReadingTime = true
 }) => {
+    const minWords = 25;
+    const maxWords = 100;
     //Handle edge case
     const wordsRemaining = Math.max(0, minWords - stats.wordCount);
     const progress = Math.min(stats.wordCount / maxWords * 100, 100);

@@ -58,7 +58,12 @@ export const CharacterCounter: React.FC<CharacterCounterProps> = ({
 
         {text.length > 0 && stats.wordCount < minWords && (
             <p className="mt-4 text-amber-600 text-sm italics">
-                Keep Writing! You need {minWords =stats.wordCount} more words to hit the minimum requirement.
+                Keep Writing! You need {minWords - stats.wordCount} more words to hit the minimum requirement.
+            </p>
+        )}
+        {text.length > 0 && stats.wordCount > maxWords && (
+            <p className="mt-4 text-red-600 text-sm italics">
+                You have exceeded the maximum word limit by {stats.wordCount - maxWords} words.
             </p>
         )}
         </div>
