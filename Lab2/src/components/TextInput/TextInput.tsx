@@ -13,7 +13,7 @@ export const TextInput: React.FC<TextInputProps> = ({
             placeholder={placeholder}
             defaultValue={initialValue}
             onChange={(e) => onTextChange(e.target.value)}
-            rows={6}
+            rows={12}
             />
         </div>
     );
