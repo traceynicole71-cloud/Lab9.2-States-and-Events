@@ -1,75 +1,63 @@
-# React + TypeScript + Vite
+# Component Creation and Props
+This lab was a practice building interactive features that respond to user input in real-time, a common requirement in modern web applications.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Table of contents
 
-Currently, two official plugins are available:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+  - [AI Collaboration](#ai-collaboration)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Note: Delete this note and update the table of contents based on what sections you keep.**
 
-## React Compiler
+## Overview
+In this lab, you will create an interactive character counter application that demonstrates state management and event handling in React. The application will allow users to input text and see real-time statistics about their input, including character count, word count, and reading time. This lab focuses on state management, event handling, and component interaction using React hooks.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+### The challenge
 
-Note: This will impact Vite dev & build performances.
+- Implement state management using the useState hook.
+- Create and handle user events effectively.
+- Build components that update their UI based on state changes.
+- Implement the callback pattern for component communication.
+- Create a responsive and user-friendly interface.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Links
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Assignment URL: https://ps-lms.vercel.app/curriculum/se/415/lab-2
+- Github URL: https://github.com/traceynicole71-cloud/Lab9.2-States-and-Events
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## My process
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Built with
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- React
+- CSS
+- Tailwind
+- Typescript
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### What I learned
+
+I learned how to create reusable React states and events to create an interactive character counter. 
+
+### Continued development
+
+Continued development for me is to pay attention to importing and exporting that links each code file to the appropriate others.
+
+### Useful resources
+
+- [Jack Herrington Youtube tutorial] https://www.youtube.com/watch?v=-urz6Sh7RE8
+
+### AI Collaboration
+
+I used Google Gemini to ask questions about setting up the counter. I also use it to help make corrections when the counter was counting words backwards--the more words I typed, it kept informing me that I needed to type more words.  I was able to find the problem and correct it in the CharacterCounter.tsx and App.tsx files.
+## Acknowledgments
+
